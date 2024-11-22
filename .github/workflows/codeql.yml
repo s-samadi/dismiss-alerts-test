@@ -105,7 +105,7 @@ jobs:
       run: |
         if [ "${{ matrix.language }}" == "java-kotlin" ]; then
           echo "language=java" >> $GITHUB_ENV
-        else if [ "${{ matrix.language }}" == "javascript-typescript" ]; then
+        elif [ "${{ matrix.language }}" == "javascript-typescript" ]; then
           echo "language=javascript" >> $GITHUB_ENV
         else
           echo "language=${{ matrix.language }}" >> $GITHUB_ENV
