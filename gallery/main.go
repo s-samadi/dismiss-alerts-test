@@ -681,6 +681,7 @@ func authnMiddleware(next http.Handler) http.Handler {
 			}
 
 			if claims, ok := token.Claims.(*OctoClaims); ok && token.Valid {
+				//codeql[go/clear-text-logging]
 				log.Printf("AuthN: Received valid token %s", authz)
 
 				log.Printf("AuthN: Adding %s %s", GitHubLoginHeader, claims.Profile.Login)
