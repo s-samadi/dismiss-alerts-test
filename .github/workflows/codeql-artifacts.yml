@@ -9,7 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL Advanced"
+name: "CodeQL Artifact Collection"
 
 on:
   pull_request:
@@ -114,4 +114,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: sarif-report
-        path: sarif-results/${{ env.language }}
+        path: sarif-results/${{ env.language }}.sarif
